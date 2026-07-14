@@ -189,6 +189,7 @@
   display: inline-flex;
   flex-direction: column;
   align-items: center;
+  vertical-align: top;
   width: 132rpx;
   height: 242rpx;
   margin-right: 14rpx;

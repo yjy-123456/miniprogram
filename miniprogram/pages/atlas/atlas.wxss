@@ -29,10 +29,12 @@
 
 .atlas-list {
   display: block;
+  width: 100%;
 }
 
 .atlas-row {
   width: 100%;
+  min-width: 0;
   height: 136rpx;
   display: flex;
   align-items: center;

@@ -58,7 +58,7 @@
         <button bindtap="goProfit">收益计算说明 ›</button>
       </view>
       <scroll-view class="crop-strip" scroll-x>
-        <button wx:for="{{crops}}" wx:key="id" class="crop-card {{item.id === selectedCropId ? 'selected' : ''}}" data-id="{{item.id}}" bindtap="selectCrop">
+        <view wx:for="{{crops}}" wx:key="id" class="crop-card {{item.id === selectedCropId ? 'selected' : ''}}" data-id="{{item.id}}" bindtap="selectCrop">
           <text wx:if="{{index === 0}}" class="crop-tag">推荐</text>
           <image src="{{item.image}}" mode="aspectFill" />
           <text class="crop-name">{{item.name}}</text>
@@ -66,7 +66,7 @@
           <text class="crop-profit">{{item.profit}}</text>
           <text>成熟</text>
           <text class="crop-time">{{item.time}}</text>
-        </button>
+        </view>
       </scroll-view>
     </view>
 

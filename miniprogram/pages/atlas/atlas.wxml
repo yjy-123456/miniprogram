@@ -22,14 +22,14 @@
     </view>
 
     <view class="atlas-list">
-      <button wx:for="{{visibleCrops}}" wx:key="id" class="atlas-row card {{selectedCrop.id === item.id ? 'selected' : ''}}" data-id="{{item.id}}" bindtap="selectCrop">
+      <view wx:for="{{visibleCrops}}" wx:key="id" class="atlas-row card {{selectedCrop.id === item.id ? 'selected' : ''}}" data-id="{{item.id}}" bindtap="selectCrop">
         <image src="{{item.image}}" mode="aspectFill" />
         <view>
           <text class="atlas-name">{{item.name}}</text>
           <text>{{item.level}}解锁 · {{item.type}} · 经验 {{item.exp}}</text>
         </view>
         <text class="atlas-profit">{{item.profit}}</text>
-      </button>
+      </view>
     </view>
 
     <view class="detail-panel card">
