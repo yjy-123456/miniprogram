@@ -1,0 +1,149 @@
+.hero.compact {
+  height: 240rpx;
+}
+
+.page-header {
+  display: grid;
+  grid-template-columns: 88rpx 1fr;
+  gap: 20rpx;
+  align-items: center;
+  padding: 26rpx 28rpx;
+}
+
+.header-icon {
+  width: 88rpx;
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 28rpx;
+  color: #2f8b45;
+  background: #eaf6e8;
+  font-weight: 800;
+}
+
+.header-copy {
+  display: block;
+  margin-top: 8rpx;
+  color: #657067;
+  font-size: 24rpx;
+  line-height: 1.45;
+}
+
+.stall-hero {
+  display: grid;
+  grid-template-columns: 96rpx 1fr;
+  gap: 22rpx;
+  align-items: center;
+  margin-top: 24rpx;
+  padding: 30rpx;
+  background: linear-gradient(135deg, #ffffff 0%, #fff6e4 100%);
+}
+
+.stall-icon {
+  width: 82rpx;
+  height: 82rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24rpx;
+  color: #d89725;
+  background: #fff0cf;
+  font-weight: 800;
+}
+
+.stall-title {
+  display: block;
+  margin-top: 10rpx;
+  color: #172019;
+  font-size: 38rpx;
+  font-weight: 800;
+}
+
+.stall-copy {
+  display: block;
+  margin-top: 12rpx;
+  color: #657067;
+  font-size: 26rpx;
+  line-height: 1.45;
+}
+
+.step-list {
+  display: grid;
+  gap: 20rpx;
+  margin-top: 24rpx;
+}
+
+.step-card {
+  display: grid;
+  grid-template-columns: 68rpx 1fr 96rpx;
+  gap: 20rpx;
+  align-items: center;
+  padding: 24rpx;
+}
+
+.rank {
+  width: 56rpx;
+  height: 56rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  background: #2f8b45;
+  font-size: 30rpx;
+  font-weight: 800;
+}
+
+.step-main {
+  display: flex;
+  flex-direction: column;
+  gap: 8rpx;
+}
+
+.step-main text:first-child {
+  color: #172019;
+  font-size: 30rpx;
+  font-weight: 800;
+}
+
+.step-main text:last-child {
+  color: #657067;
+  font-size: 24rpx;
+}
+
+.priority {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 52rpx;
+  border-radius: 999rpx;
+  color: #2f8b45;
+  background: #e9f6e8;
+  font-size: 24rpx;
+  font-weight: 800;
+}
+
+.compare-panel {
+  margin-top: 24rpx;
+  padding: 26rpx;
+}
+
+.compare-title {
+  display: block;
+  color: #2f7e42;
+  font-size: 30rpx;
+  font-weight: 800;
+}
+
+.compare-copy {
+  display: block;
+  margin-top: 12rpx;
+  color: #657067;
+  font-size: 26rpx;
+  line-height: 1.5;
+}
+
+.route-btn {
+  margin-top: 24rpx;
+}

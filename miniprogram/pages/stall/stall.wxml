@@ -1,0 +1,47 @@
+<view class="page">
+  <view class="hero compact">
+    <image class="hero-bg" src="/images/farm-hero.jpg" mode="aspectFill" />
+    <view class="hero-mask"></view>
+    <view class="hero-content">
+      <text class="hero-title">小摊升级</text>
+      <text class="hero-subtitle">比较小摊、开地、二级地投入回报</text>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="page-header card">
+      <view class="header-icon">摊</view>
+      <view>
+        <text class="section-title">小摊升级</text>
+        <text class="header-copy">比较小摊、开地、二级地的投入回报，给出下一步优先级。</text>
+      </view>
+    </view>
+
+    <view class="stall-hero card">
+      <view class="stall-icon">铺</view>
+      <view>
+        <text class="tag">当前建议</text>
+        <text class="stall-title">先升小摊到 13 级</text>
+        <text class="stall-copy">订单收益提升覆盖全部作物，回本周期短于开第5块地。</text>
+      </view>
+    </view>
+
+    <view class="step-list">
+      <view wx:for="{{stallSteps}}" wx:key="level" class="step-card card">
+        <view class="rank">{{index + 1}}</view>
+        <view class="step-main">
+          <text>{{item.level}}</text>
+          <text>消耗 {{item.cost}} · {{item.gain}}</text>
+        </view>
+        <text class="priority">{{item.priority}}</text>
+      </view>
+    </view>
+
+    <view class="compare-panel card">
+      <text class="compare-title">为什么不是先开地？</text>
+      <text class="compare-copy">当前资金下，小摊升级带来全局售价提升；开地适合资金更充足且能稳定补种时再做。</text>
+    </view>
+
+    <button class="primary-btn route-btn" bindtap="createRoute">生成我的升级路线 ›</button>
+  </view>
+</view>

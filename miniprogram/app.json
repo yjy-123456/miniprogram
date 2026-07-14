@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/atlas/atlas",
+    "pages/profit/profit",
+    "pages/stall/stall"
+  ],
+  "window": {
+    "navigationBarTitleText": "王者农场助手",
+    "navigationBarBackgroundColor": "#2f8b45",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#fbfcf8",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#8a918b",
+    "selectedColor": "#2f8b45",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/atlas/atlas",
+        "text": "作物图鉴"
+      },
+      {
+        "pagePath": "pages/profit/profit",
+        "text": "收益"
+      },
+      {
+        "pagePath": "pages/stall/stall",
+        "text": "小摊"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

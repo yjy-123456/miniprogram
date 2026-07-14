@@ -1,0 +1,68 @@
+<view class="page">
+  <view class="hero compact">
+    <image class="hero-bg" src="/images/farm-hero.jpg" mode="aspectFill" />
+    <view class="hero-mask"></view>
+    <view class="hero-content">
+      <text class="hero-title">收益推荐</text>
+      <text class="hero-subtitle">快速比较日常、睡前和周末方案</text>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="page-header card">
+      <view class="header-icon">益</view>
+      <view>
+        <text class="section-title">收益推荐</text>
+        <text class="header-copy">根据目标选择种植策略，快速比较日常、睡前和周末方案。</text>
+      </view>
+    </view>
+
+    <view class="filter-row">
+      <button wx:for="{{goals}}" wx:key="*this" class="filter-chip {{activeGoal === item ? 'active' : ''}}" data-goal="{{item}}" bindtap="selectGoal">{{item}}</button>
+    </view>
+
+    <view class="calculator-card card">
+      <view class="calc-top">
+        <view>
+          <text class="tag">当前条件</text>
+          <text class="calc-title">12级 · 5块地 · 小摊12级</text>
+        </view>
+        <text class="sliders">☷</text>
+      </view>
+      <view class="calc-grid">
+        <view>
+          <text>今日目标</text>
+          <text class="calc-strong">{{activeGoal}}</text>
+        </view>
+        <view>
+          <text>预计日收益</text>
+          <text class="calc-strong">2.36万</text>
+        </view>
+        <view>
+          <text>空窗风险</text>
+          <text class="calc-strong">低</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="plan-list">
+      <view wx:for="{{plans}}" wx:key="title" class="plan-card card">
+        <view class="rank">{{index + 1}}</view>
+        <view class="plan-main">
+          <text>{{item.title}}</text>
+          <text>{{item.crop}} · {{item.schedule}} · {{item.note}}</text>
+        </view>
+        <text class="plan-profit">{{item.profit}}</text>
+      </view>
+    </view>
+
+    <view class="weekend-card">
+      <view class="calendar-icon">日</view>
+      <view class="weekend-main">
+        <text>周末双倍收益提醒</text>
+        <text>本周双倍时间：7月18日（周六）- 7月19日（周日）</text>
+      </view>
+      <button>查看规划 ›</button>
+    </view>
+  </view>
+</view>

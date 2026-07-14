@@ -1,0 +1,57 @@
+<view class="page">
+  <view class="hero compact">
+    <image class="hero-bg" src="/images/farm-hero.jpg" mode="aspectFill" />
+    <view class="hero-mask"></view>
+    <view class="hero-content">
+      <text class="hero-title">作物图鉴</text>
+      <text class="hero-subtitle">查成熟时间、收益和突变线索</text>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="page-header card">
+      <view class="header-icon">叶</view>
+      <view>
+        <text class="section-title">作物图鉴</text>
+        <text class="header-copy">按用途筛选作物，查看成熟时间、收益和突变线索。</text>
+      </view>
+    </view>
+
+    <scroll-view class="filter-row" scroll-x>
+      <button wx:for="{{filters}}" wx:key="*this" class="filter-chip {{activeFilter === item ? 'active' : ''}}" data-filter="{{item}}" bindtap="selectFilter">{{item}}</button>
+    </scroll-view>
+
+    <view class="atlas-list">
+      <button wx:for="{{visibleCrops}}" wx:key="id" class="atlas-row card {{selectedCrop.id === item.id ? 'selected' : ''}}" data-id="{{item.id}}" bindtap="selectCrop">
+        <image src="{{item.image}}" mode="aspectFill" />
+        <view>
+          <text class="atlas-name">{{item.name}}</text>
+          <text>{{item.level}}解锁 · {{item.type}} · 经验 {{item.exp}}</text>
+        </view>
+        <text class="atlas-profit">{{item.profit}}</text>
+      </button>
+    </view>
+
+    <view class="detail-panel card">
+      <view>
+        <text class="tag">当前查看</text>
+        <text class="detail-name">{{selectedCrop.name}}</text>
+        <text class="detail-copy">成熟 {{selectedCrop.time}}，净收益 {{selectedCrop.profit}}。{{selectedCrop.note}}</text>
+      </view>
+      <image src="{{selectedCrop.image}}" mode="aspectFill" />
+    </view>
+
+    <view class="mutations card">
+      <view class="board-title">
+        <text class="section-title">突变形态</text>
+        <text class="muted">示例图鉴</text>
+      </view>
+      <view wx:for="{{mutations}}" wx:key="name" class="mutation-row">
+        <text class="spark">✦</text>
+        <text class="mutation-name">{{item.name}}</text>
+        <text>{{item.crop}} · {{item.status}}</text>
+        <text class="mutation-bonus">{{item.bonus}}</text>
+      </view>
+    </view>
+  </view>
+</view>

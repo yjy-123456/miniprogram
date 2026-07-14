@@ -1,0 +1,294 @@
+.search-panel {
+  height: 88rpx;
+  display: grid;
+  grid-template-columns: 54rpx 1fr 128rpx;
+  align-items: center;
+  gap: 12rpx;
+  padding-left: 28rpx;
+  border: 2rpx solid #d8ddd6;
+  border-radius: 999rpx;
+  background: #fff;
+  box-shadow: 0 14rpx 44rpx rgba(49, 79, 52, 0.1);
+}
+
+.search-icon {
+  color: #747d76;
+  font-size: 42rpx;
+}
+
+.search-panel input {
+  min-width: 0;
+  color: #20251f;
+  font-size: 28rpx;
+}
+
+.search-panel button {
+  height: 88rpx;
+  border-radius: 0 999rpx 999rpx 0;
+  color: #fff;
+  background: linear-gradient(180deg, #3f944b, #27733c);
+  font-size: 32rpx;
+  font-weight: 800;
+}
+
+.hot-row {
+  height: 76rpx;
+  white-space: nowrap;
+}
+
+.hot-label {
+  display: inline-flex;
+  align-items: center;
+  height: 76rpx;
+  color: #777d77;
+  font-size: 26rpx;
+}
+
+.hot-item {
+  display: inline-flex;
+  align-items: center;
+  height: 76rpx;
+  margin-left: 22rpx;
+  color: #2c7a3b;
+  font-size: 28rpx;
+}
+
+.hot-item.active {
+  color: #1d6431;
+  font-weight: 800;
+}
+
+.recommendation {
+  position: relative;
+  padding: 84rpx 28rpx 22rpx;
+  overflow: hidden;
+}
+
+.section-tab {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 184rpx;
+  height: 64rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 32rpx 0 32rpx 0;
+  color: #fff;
+  background: linear-gradient(180deg, #55a95e, #359149);
+  font-size: 32rpx;
+  font-weight: 800;
+}
+
+.badge {
+  position: absolute;
+  top: 94rpx;
+  right: 28rpx;
+  max-width: 240rpx;
+  padding: 10rpx 18rpx;
+  border-radius: 999rpx;
+  color: #457947;
+  background: #edf7e9;
+  font-size: 24rpx;
+  font-weight: 700;
+}
+
+.recommend-title {
+  display: block;
+  padding-right: 220rpx;
+  color: #172019;
+  font-size: 38rpx;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.recommend-copy {
+  display: block;
+  margin-top: 12rpx;
+  color: #626963;
+  font-size: 26rpx;
+  line-height: 1.48;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 22rpx;
+  border: 2rpx solid #eef1ea;
+  border-radius: 30rpx;
+  background: #fff;
+  overflow: hidden;
+}
+
+.metric-item {
+  min-width: 0;
+  padding: 18rpx 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rpx;
+  text-align: center;
+}
+
+.metric-item + .metric-item {
+  border-left: 2rpx dashed #dde2da;
+}
+
+.metric-item text {
+  color: #777f78;
+  font-size: 22rpx;
+}
+
+.metric-strong {
+  color: #171c18;
+  font-size: 36rpx;
+  font-weight: 800;
+}
+
+.recommendation .primary-btn {
+  margin-top: 18rpx;
+}
+
+.crop-board {
+  margin-top: 24rpx;
+  padding: 24rpx;
+}
+
+.board-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18rpx;
+}
+
+.board-title button {
+  color: #777d77;
+  font-size: 24rpx;
+}
+
+.crop-strip {
+  white-space: nowrap;
+}
+
+.crop-card {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: 176rpx;
+  height: 264rpx;
+  margin-right: 16rpx;
+  padding: 16rpx 12rpx;
+  border: 2rpx solid #e2e4df;
+  border-radius: 22rpx;
+  color: #222720;
+  background: linear-gradient(180deg, #fff, #fafbf8);
+}
+
+.crop-card.selected {
+  border-color: #3a9a4c;
+  background: linear-gradient(180deg, #f5fff4, #fff);
+}
+
+.crop-card image {
+  width: 84rpx;
+  height: 84rpx;
+  border-radius: 18rpx;
+}
+
+.crop-name {
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  font-weight: 800;
+}
+
+.crop-card text {
+  margin-top: 6rpx;
+  color: #838a84;
+  font-size: 20rpx;
+}
+
+.crop-profit {
+  margin-top: 4rpx;
+  font-size: 26rpx;
+  color: #172019 !important;
+  font-weight: 800;
+}
+
+.crop-time {
+  margin-top: 4rpx;
+  font-size: 24rpx;
+  color: #172019 !important;
+}
+
+.crop-tag {
+  position: absolute;
+  top: 12rpx;
+  right: 12rpx;
+  padding: 4rpx 12rpx;
+  border-radius: 999rpx;
+  color: #2a7637 !important;
+  background: #cfeec7;
+  font-size: 22rpx !important;
+  font-weight: 800;
+}
+
+.weekend-card {
+  margin-top: 24rpx;
+  display: grid;
+  grid-template-columns: 72rpx 1fr 156rpx;
+  gap: 20rpx;
+  align-items: center;
+  padding: 24rpx;
+  border: 2rpx solid #edcf91;
+  border-radius: 32rpx;
+  color: #814a0f;
+  background: linear-gradient(180deg, #fffaf0, #fff6e4);
+}
+
+.calendar-icon {
+  width: 60rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4rpx solid #d89725;
+  border-radius: 12rpx;
+  color: #d89725;
+  font-weight: 800;
+}
+
+.weekend-main {
+  display: flex;
+  flex-direction: column;
+  gap: 8rpx;
+}
+
+.weekend-main text:first-child {
+  font-size: 30rpx;
+  font-weight: 800;
+}
+
+.weekend-main text:last-child {
+  font-size: 24rpx;
+  line-height: 1.35;
+}
+
+.weekend-card button {
+  height: 64rpx;
+  border-radius: 999rpx;
+  color: #9b5c12;
+  background: #ffe8bd;
+  font-size: 24rpx;
+  font-weight: 800;
+}
+
+.tip-line {
+  margin-top: 24rpx;
+  padding: 18rpx 22rpx;
+  border-radius: 18rpx;
+  color: #4f8c55;
+  background: #edf6ec;
+  font-size: 24rpx;
+  line-height: 1.4;
+}

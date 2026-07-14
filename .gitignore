@@ -1,0 +1,6 @@
+prototype/
+node_modules/
+dist/
+.npm-cache/
+.DS_Store
+project.private.config.json

@@ -1,0 +1,82 @@
+<view class="page">
+  <view class="hero">
+    <image class="hero-bg" src="/images/farm-hero.jpg" mode="aspectFill" />
+    <view class="hero-mask"></view>
+    <view class="hero-content">
+      <text class="hero-title">王者农场助手</text>
+      <text class="hero-subtitle">种得明白，收益更高</text>
+      <view class="date-chip">2026-07-14 周二</view>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="search-panel">
+      <text class="search-icon">⌕</text>
+      <input value="{{query}}" bindinput="onSearchInput" placeholder="今天种什么 / 小摊还是升地" confirm-type="search" bindconfirm="runSearch" />
+      <button bindtap="runSearch">搜索</button>
+    </view>
+
+    <scroll-view class="hot-row" scroll-x>
+      <text class="hot-label">热门搜索：</text>
+      <button wx:for="{{hotSearches}}" wx:key="*this" class="hot-item {{item === query ? 'active' : ''}}" data-keyword="{{item}}" bindtap="tapHotSearch">
+        {{item}}
+      </button>
+    </scroll-view>
+
+    <view class="recommendation card">
+      <view class="section-tab">今日推荐</view>
+      <view class="badge">{{advice.badge}}</view>
+      <text class="recommend-title">{{advice.title}}</text>
+      <text class="recommend-copy">{{advice.body}}</text>
+
+      <view class="metric-grid">
+        <view class="metric-item">
+          <text>预计净收益</text>
+          <text class="metric-strong">{{advice.profit}}</text>
+          <text>/ 次（含加成）</text>
+        </view>
+        <view class="metric-item">
+          <text>成熟时间</text>
+          <text class="metric-strong">{{advice.time}}</text>
+          <text>较快</text>
+        </view>
+        <view class="metric-item">
+          <text>推荐理由</text>
+          <text class="metric-strong">{{advice.reason}}</text>
+          <text>适合日常节奏</text>
+        </view>
+      </view>
+
+      <button class="primary-btn" bindtap="goAtlas">查看详情与种植建议</button>
+    </view>
+
+    <view class="crop-board card">
+      <view class="board-title">
+        <text class="section-title">作物收益对比</text>
+        <button bindtap="goProfit">收益计算说明 ›</button>
+      </view>
+      <scroll-view class="crop-strip" scroll-x>
+        <button wx:for="{{crops}}" wx:key="id" class="crop-card {{item.id === selectedCropId ? 'selected' : ''}}" data-id="{{item.id}}" bindtap="selectCrop">
+          <text wx:if="{{index === 0}}" class="crop-tag">推荐</text>
+          <image src="{{item.image}}" mode="aspectFill" />
+          <text class="crop-name">{{item.name}}</text>
+          <text>净收益</text>
+          <text class="crop-profit">{{item.profit}}</text>
+          <text>成熟</text>
+          <text class="crop-time">{{item.time}}</text>
+        </button>
+      </scroll-view>
+    </view>
+
+    <view class="weekend-card">
+      <view class="calendar-icon">日</view>
+      <view class="weekend-main">
+        <text>周末双倍收益提醒</text>
+        <text>本周双倍时间：7月18日（周六）- 7月19日（周日）</text>
+      </view>
+      <button bindtap="goProfit">查看规划 ›</button>
+    </view>
+
+    <view class="tip-line">小贴士：升级土地可提升基础产量，资金充足且作物收益较低时优先升级。</view>
+  </view>
+</view>
