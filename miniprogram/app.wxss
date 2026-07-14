@@ -15,6 +15,7 @@ image {
 }
 
 button {
+  margin: 0;
   padding: 0;
   border: 0;
   background: transparent;
@@ -34,8 +35,8 @@ button::after {
 
 .hero {
   position: relative;
-  height: 292rpx;
-  padding: 58rpx 32rpx 0;
+  height: 322rpx;
+  padding: 92rpx 32rpx 0;
   color: #fff;
   overflow: hidden;
 }
@@ -62,7 +63,7 @@ button::after {
 .hero-title {
   display: block;
   margin-bottom: 10rpx;
-  font-size: 56rpx;
+  font-size: 54rpx;
   line-height: 1.05;
   font-weight: 800;
 }
@@ -70,7 +71,7 @@ button::after {
 .hero-subtitle {
   display: block;
   margin-bottom: 18rpx;
-  font-size: 32rpx;
+  font-size: 31rpx;
   color: rgba(255, 255, 255, 0.92);
 }
 
@@ -87,9 +88,20 @@ button::after {
   position: relative;
   z-index: 2;
   margin-top: -20rpx;
-  padding: 28rpx 32rpx 40rpx;
+  padding: 28rpx 36rpx 40rpx;
   border-radius: 48rpx 48rpx 0 0;
   background: #fbfcf8;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+}
+
+.page-header > view:last-child {
+  flex: 1;
+  min-width: 0;
 }
 
 .card {
@@ -140,6 +152,7 @@ button::after {
 }
 
 .filter-chip {
+  flex: 1;
   min-width: 112rpx;
   height: 68rpx;
   padding: 0 24rpx;

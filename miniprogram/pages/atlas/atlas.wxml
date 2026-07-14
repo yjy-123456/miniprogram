@@ -17,9 +17,9 @@
       </view>
     </view>
 
-    <scroll-view class="filter-row" scroll-x>
+    <view class="filter-row">
       <button wx:for="{{filters}}" wx:key="*this" class="filter-chip {{activeFilter === item ? 'active' : ''}}" data-filter="{{item}}" bindtap="selectFilter">{{item}}</button>
-    </scroll-view>
+    </view>
 
     <view class="atlas-list">
       <button wx:for="{{visibleCrops}}" wx:key="id" class="atlas-row card {{selectedCrop.id === item.id ? 'selected' : ''}}" data-id="{{item.id}}" bindtap="selectCrop">

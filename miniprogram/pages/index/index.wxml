@@ -25,8 +25,10 @@
 
     <view class="recommendation card">
       <view class="section-tab">今日推荐</view>
-      <view class="badge">{{advice.badge}}</view>
-      <text class="recommend-title">{{advice.title}}</text>
+      <view class="recommend-heading">
+        <text class="recommend-title">{{advice.title}}</text>
+        <view class="badge">{{advice.badge}}</view>
+      </view>
       <text class="recommend-copy">{{advice.body}}</text>
 
       <view class="metric-grid">

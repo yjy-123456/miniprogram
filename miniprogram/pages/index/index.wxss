@@ -1,14 +1,14 @@
 .search-panel {
   height: 88rpx;
-  display: grid;
-  grid-template-columns: 54rpx 1fr 128rpx;
+  display: flex;
   align-items: center;
-  gap: 12rpx;
-  padding-left: 28rpx;
+  gap: 10rpx;
+  padding-left: 26rpx;
   border: 2rpx solid #d8ddd6;
   border-radius: 999rpx;
   background: #fff;
   box-shadow: 0 14rpx 44rpx rgba(49, 79, 52, 0.1);
+  overflow: hidden;
 }
 
 .search-icon {
@@ -17,12 +17,16 @@
 }
 
 .search-panel input {
+  flex: 1;
   min-width: 0;
   color: #20251f;
   font-size: 28rpx;
 }
 
 .search-panel button {
+  flex: 0 0 126rpx;
+  width: 126rpx;
+  min-width: 0;
   height: 88rpx;
   border-radius: 0 999rpx 999rpx 0;
   color: #fff;
@@ -32,14 +36,14 @@
 }
 
 .hot-row {
-  height: 76rpx;
+  height: 72rpx;
   white-space: nowrap;
 }
 
 .hot-label {
   display: inline-flex;
   align-items: center;
-  height: 76rpx;
+  height: 72rpx;
   color: #777d77;
   font-size: 26rpx;
 }
@@ -47,8 +51,8 @@
 .hot-item {
   display: inline-flex;
   align-items: center;
-  height: 76rpx;
-  margin-left: 22rpx;
+  height: 72rpx;
+  margin-left: 20rpx;
   color: #2c7a3b;
   font-size: 28rpx;
 }
@@ -60,7 +64,7 @@
 
 .recommendation {
   position: relative;
-  padding: 84rpx 28rpx 22rpx;
+  padding: 86rpx 28rpx 24rpx;
   overflow: hidden;
 }
 
@@ -80,22 +84,30 @@
   font-weight: 800;
 }
 
+.recommend-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16rpx;
+}
+
 .badge {
-  position: absolute;
-  top: 94rpx;
-  right: 28rpx;
-  max-width: 240rpx;
-  padding: 10rpx 18rpx;
+  flex: 0 0 auto;
+  max-width: 210rpx;
+  padding: 9rpx 16rpx;
   border-radius: 999rpx;
   color: #457947;
   background: #edf7e9;
-  font-size: 24rpx;
+  font-size: 23rpx;
   font-weight: 700;
+  line-height: 1.25;
 }
 
 .recommend-title {
+  flex: 1;
+  min-width: 0;
   display: block;
-  padding-right: 220rpx;
+  padding-right: 0;
   color: #172019;
   font-size: 38rpx;
   font-weight: 800;
@@ -106,14 +118,14 @@
   display: block;
   margin-top: 12rpx;
   color: #626963;
-  font-size: 26rpx;
+  padding-right: 0;
+  font-size: 25rpx;
   line-height: 1.48;
 }
 
 .metric-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin-top: 22rpx;
+  display: flex;
+  margin-top: 24rpx;
   border: 2rpx solid #eef1ea;
   border-radius: 30rpx;
   background: #fff;
@@ -121,8 +133,9 @@
 }
 
 .metric-item {
+  flex: 1;
   min-width: 0;
-  padding: 18rpx 10rpx;
+  padding: 16rpx 8rpx;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -141,17 +154,18 @@
 
 .metric-strong {
   color: #171c18;
-  font-size: 36rpx;
+  font-size: 32rpx;
   font-weight: 800;
 }
 
 .recommendation .primary-btn {
+  width: 100%;
   margin-top: 18rpx;
 }
 
 .crop-board {
   margin-top: 24rpx;
-  padding: 24rpx;
+  padding: 24rpx 20rpx;
 }
 
 .board-title {
@@ -175,10 +189,10 @@
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  width: 176rpx;
-  height: 264rpx;
-  margin-right: 16rpx;
-  padding: 16rpx 12rpx;
+  width: 132rpx;
+  height: 242rpx;
+  margin-right: 14rpx;
+  padding: 14rpx 10rpx;
   border: 2rpx solid #e2e4df;
   border-radius: 22rpx;
   color: #222720;
@@ -191,52 +205,51 @@
 }
 
 .crop-card image {
-  width: 84rpx;
-  height: 84rpx;
+  width: 74rpx;
+  height: 74rpx;
   border-radius: 18rpx;
 }
 
 .crop-name {
-  margin-top: 10rpx;
-  font-size: 26rpx;
+  margin-top: 8rpx;
+  font-size: 24rpx;
   font-weight: 800;
 }
 
 .crop-card text {
   margin-top: 6rpx;
   color: #838a84;
-  font-size: 20rpx;
+  font-size: 19rpx;
 }
 
 .crop-profit {
   margin-top: 4rpx;
-  font-size: 26rpx;
+  font-size: 24rpx;
   color: #172019 !important;
   font-weight: 800;
 }
 
 .crop-time {
   margin-top: 4rpx;
-  font-size: 24rpx;
+  font-size: 22rpx;
   color: #172019 !important;
 }
 
 .crop-tag {
   position: absolute;
   top: 12rpx;
-  right: 12rpx;
+  right: 10rpx;
   padding: 4rpx 12rpx;
   border-radius: 999rpx;
   color: #2a7637 !important;
   background: #cfeec7;
-  font-size: 22rpx !important;
+  font-size: 20rpx !important;
   font-weight: 800;
 }
 
 .weekend-card {
   margin-top: 24rpx;
-  display: grid;
-  grid-template-columns: 72rpx 1fr 156rpx;
+  display: flex;
   gap: 20rpx;
   align-items: center;
   padding: 24rpx;
@@ -247,6 +260,7 @@
 }
 
 .calendar-icon {
+  flex: 0 0 60rpx;
   width: 60rpx;
   height: 60rpx;
   display: flex;
@@ -259,6 +273,8 @@
 }
 
 .weekend-main {
+  flex: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 8rpx;
@@ -275,6 +291,7 @@
 }
 
 .weekend-card button {
+  flex: 0 0 150rpx;
   height: 64rpx;
   border-radius: 999rpx;
   color: #9b5c12;

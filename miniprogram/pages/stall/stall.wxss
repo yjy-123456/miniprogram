@@ -3,14 +3,11 @@
 }
 
 .page-header {
-  display: grid;
-  grid-template-columns: 88rpx 1fr;
-  gap: 20rpx;
-  align-items: center;
   padding: 26rpx 28rpx;
 }
 
 .header-icon {
+  flex: 0 0 88rpx;
   width: 88rpx;
   height: 88rpx;
   display: flex;
@@ -31,8 +28,7 @@
 }
 
 .stall-hero {
-  display: grid;
-  grid-template-columns: 96rpx 1fr;
+  display: flex;
   gap: 22rpx;
   align-items: center;
   margin-top: 24rpx;
@@ -41,6 +37,7 @@
 }
 
 .stall-icon {
+  flex: 0 0 82rpx;
   width: 82rpx;
   height: 82rpx;
   display: flex;
@@ -69,20 +66,20 @@
 }
 
 .step-list {
-  display: grid;
-  gap: 20rpx;
+  display: block;
   margin-top: 24rpx;
 }
 
 .step-card {
-  display: grid;
-  grid-template-columns: 68rpx 1fr 96rpx;
+  display: flex;
   gap: 20rpx;
   align-items: center;
   padding: 24rpx;
+  margin-bottom: 20rpx;
 }
 
 .rank {
+  flex: 0 0 56rpx;
   width: 56rpx;
   height: 56rpx;
   display: flex;
@@ -96,6 +93,8 @@
 }
 
 .step-main {
+  flex: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 8rpx;
@@ -113,6 +112,7 @@
 }
 
 .priority {
+  flex: 0 0 88rpx;
   display: flex;
   align-items: center;
   justify-content: center;

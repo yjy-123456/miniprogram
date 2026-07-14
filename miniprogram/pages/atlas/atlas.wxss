@@ -3,14 +3,11 @@
 }
 
 .page-header {
-  display: grid;
-  grid-template-columns: 88rpx 1fr;
-  gap: 20rpx;
-  align-items: center;
   padding: 26rpx 28rpx;
 }
 
 .header-icon {
+  flex: 0 0 88rpx;
   width: 88rpx;
   height: 88rpx;
   display: flex;
@@ -31,17 +28,17 @@
 }
 
 .atlas-list {
-  display: grid;
-  gap: 18rpx;
+  display: block;
 }
 
 .atlas-row {
+  width: 100%;
   height: 136rpx;
-  display: grid;
-  grid-template-columns: 96rpx 1fr 116rpx;
+  display: flex;
   align-items: center;
   gap: 20rpx;
   padding: 18rpx 24rpx;
+  margin-bottom: 18rpx;
   text-align: left;
 }
 
@@ -51,9 +48,15 @@
 }
 
 .atlas-row image {
+  flex: 0 0 92rpx;
   width: 92rpx;
   height: 92rpx;
   border-radius: 24rpx;
+}
+
+.atlas-row > view {
+  flex: 1;
+  min-width: 0;
 }
 
 .atlas-name {
@@ -67,9 +70,14 @@
 .atlas-row text {
   color: #657067;
   font-size: 24rpx;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .atlas-profit {
+  flex: 0 0 108rpx;
   color: #277a3d;
   font-size: 30rpx;
   font-weight: 800;
@@ -77,8 +85,7 @@
 }
 
 .detail-panel {
-  display: grid;
-  grid-template-columns: 1fr 170rpx;
+  display: flex;
   gap: 24rpx;
   align-items: center;
   margin-top: 24rpx;
@@ -102,6 +109,7 @@
 }
 
 .detail-panel image {
+  flex: 0 0 170rpx;
   width: 170rpx;
   height: 170rpx;
   border-radius: 28rpx;
@@ -120,8 +128,7 @@
 }
 
 .mutation-row {
-  display: grid;
-  grid-template-columns: 38rpx 1fr 150rpx 70rpx;
+  display: flex;
   gap: 10rpx;
   align-items: center;
   padding: 20rpx 0;
@@ -129,11 +136,14 @@
 }
 
 .spark {
+  flex: 0 0 38rpx;
   color: #8e62d9;
   font-size: 30rpx;
 }
 
 .mutation-name {
+  flex: 1;
+  min-width: 0;
   font-size: 26rpx;
   font-weight: 800;
 }
@@ -141,9 +151,11 @@
 .mutation-row text {
   color: #6d756d;
   font-size: 24rpx;
+  white-space: nowrap;
 }
 
 .mutation-bonus {
+  flex: 0 0 70rpx;
   color: #d66b30;
   font-size: 26rpx;
   font-weight: 800;

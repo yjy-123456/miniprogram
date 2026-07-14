@@ -9,6 +9,7 @@
     "navigationBarTitleText": "王者农场助手",
     "navigationBarBackgroundColor": "#2f8b45",
     "navigationBarTextStyle": "white",
+    "navigationStyle": "custom",
     "backgroundColor": "#fbfcf8",
     "backgroundTextStyle": "light"
   },
@@ -20,19 +21,27 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "首页",
+        "iconPath": "images/tabbar/home.png",
+        "selectedIconPath": "images/tabbar/home-active.png"
       },
       {
         "pagePath": "pages/atlas/atlas",
-        "text": "作物图鉴"
+        "text": "作物图鉴",
+        "iconPath": "images/tabbar/compass.png",
+        "selectedIconPath": "images/tabbar/compass-active.png"
       },
       {
         "pagePath": "pages/profit/profit",
-        "text": "收益"
+        "text": "收益",
+        "iconPath": "images/tabbar/chart.png",
+        "selectedIconPath": "images/tabbar/chart-active.png"
       },
       {
         "pagePath": "pages/stall/stall",
-        "text": "小摊"
+        "text": "小摊",
+        "iconPath": "images/tabbar/stall.png",
+        "selectedIconPath": "images/tabbar/stall-active.png"
       }
     ]
   },

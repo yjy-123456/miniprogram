@@ -3,14 +3,11 @@
 }
 
 .page-header {
-  display: grid;
-  grid-template-columns: 88rpx 1fr;
-  gap: 20rpx;
-  align-items: center;
   padding: 26rpx 28rpx;
 }
 
 .header-icon {
+  flex: 0 0 88rpx;
   width: 88rpx;
   height: 88rpx;
   display: flex;
@@ -56,8 +53,7 @@
 }
 
 .calc-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   border: 2rpx solid #edf1ea;
   border-radius: 28rpx;
   overflow: hidden;
@@ -65,6 +61,7 @@
 }
 
 .calc-grid view {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,20 +85,20 @@
 }
 
 .plan-list {
-  display: grid;
-  gap: 20rpx;
+  display: block;
   margin-top: 24rpx;
 }
 
 .plan-card {
-  display: grid;
-  grid-template-columns: 68rpx 1fr 160rpx;
+  display: flex;
   gap: 20rpx;
   align-items: center;
   padding: 24rpx;
+  margin-bottom: 20rpx;
 }
 
 .rank {
+  flex: 0 0 56rpx;
   width: 56rpx;
   height: 56rpx;
   display: flex;
@@ -115,6 +112,8 @@
 }
 
 .plan-main {
+  flex: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 8rpx;
@@ -133,6 +132,7 @@
 }
 
 .plan-profit {
+  flex: 0 0 160rpx;
   color: #b36a18;
   font-size: 28rpx;
   font-weight: 800;
@@ -141,8 +141,7 @@
 
 .weekend-card {
   margin-top: 24rpx;
-  display: grid;
-  grid-template-columns: 72rpx 1fr 156rpx;
+  display: flex;
   gap: 20rpx;
   align-items: center;
   padding: 24rpx;
@@ -153,6 +152,7 @@
 }
 
 .calendar-icon {
+  flex: 0 0 60rpx;
   width: 60rpx;
   height: 60rpx;
   display: flex;
@@ -165,6 +165,8 @@
 }
 
 .weekend-main {
+  flex: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 8rpx;
@@ -181,6 +183,7 @@
 }
 
 .weekend-card button {
+  flex: 0 0 150rpx;
   height: 64rpx;
   border-radius: 999rpx;
   color: #9b5c12;
