@@ -13,14 +13,14 @@
     <view class="search-panel">
       <text class="search-icon">⌕</text>
       <input value="{{query}}" bindinput="onSearchInput" placeholder="今天种什么 / 小摊还是升地" confirm-type="search" bindconfirm="runSearch" />
-      <button bindtap="runSearch">搜索</button>
+      <view class="search-button" bindtap="runSearch">搜索</view>
     </view>
 
     <scroll-view class="hot-row" scroll-x>
       <text class="hot-label">热门搜索：</text>
-      <button wx:for="{{hotSearches}}" wx:key="*this" class="hot-item {{item === query ? 'active' : ''}}" data-keyword="{{item}}" bindtap="tapHotSearch">
+      <view wx:for="{{hotSearches}}" wx:key="*this" class="hot-item {{item === query ? 'active' : ''}}" data-keyword="{{item}}" bindtap="tapHotSearch">
         {{item}}
-      </button>
+      </view>
     </scroll-view>
 
     <view class="recommendation card">

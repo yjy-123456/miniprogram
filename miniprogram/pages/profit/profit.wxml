@@ -18,7 +18,7 @@
     </view>
 
     <view class="filter-row">
-      <button wx:for="{{goals}}" wx:key="*this" class="filter-chip {{activeGoal === item ? 'active' : ''}}" data-goal="{{item}}" bindtap="selectGoal">{{item}}</button>
+      <view wx:for="{{goals}}" wx:key="*this" class="filter-chip {{activeGoal === item ? 'active' : ''}}" data-goal="{{item}}" bindtap="selectGoal">{{item}}</view>
     </view>
 
     <view class="calculator-card card">

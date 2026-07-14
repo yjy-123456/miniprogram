@@ -18,7 +18,7 @@
     </view>
 
     <view class="filter-row">
-      <button wx:for="{{filters}}" wx:key="*this" class="filter-chip {{activeFilter === item ? 'active' : ''}}" data-filter="{{item}}" bindtap="selectFilter">{{item}}</button>
+      <view wx:for="{{filters}}" wx:key="*this" class="filter-chip {{activeFilter === item ? 'active' : ''}}" data-filter="{{item}}" bindtap="selectFilter">{{item}}</view>
     </view>
 
     <view class="atlas-list">

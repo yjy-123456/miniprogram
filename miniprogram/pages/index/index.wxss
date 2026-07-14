@@ -23,16 +23,20 @@
   font-size: 28rpx;
 }
 
-.search-panel button {
+.search-button {
   flex: 0 0 126rpx;
   width: 126rpx;
   min-width: 0;
   height: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 0 999rpx 999rpx 0;
   color: #fff;
   background: linear-gradient(180deg, #3f944b, #27733c);
-  font-size: 32rpx;
+  font-size: 30rpx;
   font-weight: 800;
+  line-height: 1;
 }
 
 .hot-row {
@@ -51,10 +55,12 @@
 .hot-item {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   height: 72rpx;
   margin-left: 20rpx;
   color: #2c7a3b;
   font-size: 28rpx;
+  line-height: 1;
 }
 
 .hot-item.active {
